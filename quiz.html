@@ -1,0 +1,304 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" type="text/css">
+
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: url('../mini_project/java images/myquiz.png') no-repeat fixed;
+                background-size: cover;
+                z-index: -1;
+                font-size: 20px;
+
+            }
+            div#nav{
+                position: absolute;
+                right: 0;
+                padding: 10px 0 0 0;
+                display: none;
+                height: 40px;
+                width: 45%;
+                text-align: center;
+                background-color: #ecef67;
+                text-transform: capitalize;
+                border-bottom-left-radius: 20px;
+            }
+            #info{
+                background-color: rgba(0, 0, 0, 0.5);
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+            #size
+            {
+                font-size: 40;
+            }
+
+            #info .fm{ 
+                /*position: absolute;
+                top: 9%;
+                width: 75%;
+                height: 80%;
+                background-color: rgb(26, 198, 255);
+                border: 1px solid blue;
+                left: 13%;
+                font-size: 1.4em;
+                border-radius: 30px; 
+            }
+
+            #info .fm form{
+                padding-top: 30px;
+                border-radius: 30px;
+
+
+            }
+
+            #info .fm .btn{
+                width: 20%;
+                height: 9%;
+                border-radius: 30px;
+                /*margin-left: 19%;*/
+            }
+
+            #info form span{
+                color: red;
+            }
+
+            .fmQuiz{
+                padding: 10px 0 0 10px;
+                font-variant: normal;
+                font-weight: bold;
+                font-family: monospace;
+                font-size: x-large;
+				
+            }
+
+            #disResult{
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                font-family: cursive;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            #disResult #result{
+                position: absolute;
+                top: 6%;
+                left: 8%;
+                padding: 2% 0 2% 0;
+                font-size: 3em;
+                /*background: url('../mini_project/java images/b.jpg  ') no-repeat fixed;*/
+                width: 84%;
+                height: auto;
+                border-radius: 30px;
+                text-align: center;
+                font-family: Kaushan;
+            }
+
+            #disResult #result span{
+               color: #ca16d6;
+              text-transform: capitalize;
+               font-weight: 600;
+                font-family: sans-serif;
+            }
+
+            @font-face{
+                font-family: Kaushan;
+                src: url("font/KaushanScript-Regular.otf");
+            }
+
+            a{
+                text-decoration: none;
+                font-size: 1em;
+                color: black;
+            }
+
+            a:hover{
+                color: ;
+            }
+
+            .successlink{
+
+                border: #65bdfc;
+                border-style: solid;
+                background-color: #cfe5f9;
+                padding: 10px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            .Q{
+
+                 font-size: xx-large;
+            }
+
+            .Q:nth-child(odd) {
+                color: #e40b8d;
+            }
+            .Q:nth-child(even) {
+               color: #853aca;
+            }
+
+        </style>
+        <script src="assets/js/sample.js">
+			
+		</script>
+    </head>
+    <body>
+		 <div id="disResult">
+            <div id="result" style="font-family: cursive;"></div>
+        </div>
+        <div id="nav"></div>
+        <form name="fm" class="fmQuiz">
+            <div>
+                <p class="Q">Question 1:</p>
+                <p class="ques">Java keywords are written in lowercase as well as uppercase.</p>
+                    <input type="radio" id="q1" name="q1" value="true"> True <br>
+                    <input type="radio" id="q1" name="q1" value="false"> False <br>
+                    <br>
+            </div>
+                <p class="Q">Question 2:</p>
+                <p class="ques">Which of the following is not a Java keyword?</p>
+                    <input type="radio" id="q2" name="q2" value="static"> static <br>
+                    <input type="radio" id="q2" name="q2" value="try"> try <br>
+                    <input type="radio" id="q2" name="q2" value="Integer"> Integer <br>
+                    <input type="radio" id="q2" name="q2" value="new"> new <br>
+                    <br>
+
+                <p class="Q">Question 3:</p>
+                <p class="ques">Which branching statement will cause a program to immediately exit a loop?</p>
+                    <input type="radio" id="q3" name="q3" value="break"> break <br>
+                    <input type="radio" id="q3" name="q3" value="continue"> continue <br>
+                    <input type="radio" id="q3" name="q3" value="return"> return <br>
+                    <input type="radio" id="q3" name="q3" value="all"> All of the above <br>
+                    <br>
+            
+                <p class="Q">Question 4:</p> 
+                <p class="ques">Determine the output?</p>
+                <pre>
+                    public class test{
+                        public static void main(String args[]){
+                            int i, j;
+                            for(i=1, j=0; i&lt;10; i++)
+                                j += 1;
+
+                            System.out.print(i);
+                        }
+                    }
+                </pre>
+                    <input type="radio" id="q4" name="q4" value="a10"> 10 <br>
+                    <input type="radio" id="q4" name="q4" value="a11"> 11 <br>
+                    <input type="radio" id="q4" name="q4" value="a9"> 9 <br>
+                    <input type="radio" id="q4" name="q4" value="a20"> 20 <br>
+                    <br>
+
+                <p class="Q">Question 5:</p>
+                <p class="ques">Which is true?</p>
+                    <input type="radio" id="q5" name="q5" value="c1"> "X extends Y" is correct if and only if X is a class and Y is an interface <br>
+                    <input type="radio" id="q5" name="q5" value="c2"> "X extends Y" is correct if and only if X is an interface and Y is a class <br>
+                    <input type="radio" id="q5" name="q5" value="c3"> "X extends Y" is correct if X and Y are either both classes or both interfaces <br>
+                    <input type="radio" id="q5" name="q5" value="c4"> "X extends Y" is correct for all combinations of X and Y being classes and/or interfaces <br>
+                    <br>
+
+                <p class="Q">Question 6:</p>
+                <p class="ques">Determine the output?</p>
+                <pre>
+                    class A{
+                        public void method1(){
+                            System.out.print("Class A method 1");
+                        }
+                    }
+
+                    class B extends A{
+                        public void method2(){
+                            System.out.print("Class B method 2");
+                        }
+                    }
+
+                    class C extends B{
+                        public void method1(){
+                            System.out.print("Class C method 1");
+                        }
+
+                        public void method3(){
+                            System.out.print("Class C method 3");
+                        }
+                    }
+
+                    public class test{
+                        public static void main(String args[]){
+                            A a = new A();
+                            C c = new C();
+
+                            c.method2();
+                            a = c;
+                            a.method3();
+                        }
+                    }
+                </pre>
+
+                    <input type="radio" id="q6" name="q6" value="cc1"> Class B method 2 Class C method 3 <br>
+                    <input type="radio" id="q6" name="q6" value="cc2"> Class C method 2 Class C method 3 <br>
+                    <input type="radio" id="q6" name="q6" value="cc3"> Compilation Error <br>
+                    <input type="radio" id="q6" name="q6" value="cc4"> Runtime exception <br>
+                    <br>
+
+                <p class="Q">Question 7:</p>
+                <p class="ques">Exception generated in try block is caught in _________ block.</p>
+                    <input type="radio" id="q7" name="q7" value="catch"> catch <br>
+                    <input type="radio" id="q7" name="q7" value="throw"> throw <br>
+                    <input type="radio" id="q7" name="q7" value="throws"> throws <br>
+                    <input type="radio" id="q7" name="q7" value="finally"> finally <br>
+                    <br>
+
+                <p class="Q">Question 8:</p>
+                <p class="ques">Which of the following blocks execute compulsorily whether exception is caught or not</p>
+                    <input type="radio" id="q8" name="q8" value="catch"> catch <br>
+                    <input type="radio" id="q8" name="q8" value="throw"> throw <br>
+                    <input type="radio" id="q8" name="q8" value="throws"> throws <br>
+                    <input type="radio" id="q8" name="q8" value="finally"> finally <br>
+                    <br>
+
+                <p class="Q">Question 9:</p>
+                <p class="ques">Determine the output?</p>
+                <pre>
+                    public class test{
+                        public static void main(String args[]){
+                            String s1 = new String("Hello");
+                            String s2 = new String("Hellow");
+                            System.out.println(s1 = s2);
+                        }
+                    }
+                </pre>
+                    <input type="radio" id="q9" name="q9" value="hello"> Hello <br>
+                    <input type="radio" id="q9" name="q9" value="hellow"> Hellow <br>
+                    <input type="radio" id="q9" name="q9" value="error"> Compliation error <br>
+                    <input type="radio" id="q9" name="q9" value="throws"> Throws an exception <br>
+                    <br>
+
+                <p class="Q">Question 10:</p>
+                <pre>
+                    public class test{
+                        public static void main(String args[]){
+                            String s1 = "java";
+                            String s2 = "java";
+
+                            System.out.println(s1.eqauls(s2));
+                            System.out.println(s1 == s2);
+                        }
+                    }
+                </pre>
+                    <input type="radio" id="q10" name="q10" value="ft"> false true <br>
+                    <input type="radio" id="q10" name="q10" value="ff"> false false <br>
+                    <input type="radio" id="q10" name="q10" value="tf"> true false <br>
+                    <input type="radio" id="q10" name="q10" value="tt"> true true <br>    
+                    <br>
+            <input type="button" onclick="return check()" value="Result"  style="font-family: fantasy;font-size: x-large;color: #ff4c02cc;width: 250px;height: 44px;border-radius: 22px;background-color: #e4edf1;border-color: #f19672;margin-left: 400;">
+        </form>
+    </body>
+</html>
