@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Duplicate License</title>
+    <script>
+        function msg()
+        {
+            alert("Your appoitment is booked");
+        }
+    </script>
+    </head>
+<body>
+    <h2>Duplicate License Booking</h2>
+    <form >
+        <fieldset>
+         <legend>Booking:</legend>
+         <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname"><br><br>
+         <label for="lname">Last name:</label>
+         <input type="text" id="lname" name="lname"><br><br>
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email"><br><br>
+         <label for="appointment date">Appointment Date:</label>
+         <input type="date" id="AppointmentDate" name="Appointment_Date"><br><br>
+         <label for="Blood Group">Blood Group:</label>
+         <input type="text" id="bloodg" name="bloodg"><br><br>
+         <label for="timing">Timing slot of appointment:</label>
+         <select>
+             <option>10:00 to 12:00</option>
+             <option>12:00 to 2:00</option>
+             <option>3:00 to 5:00</option>
+        </select>
+        <br>
+        <br>
+         <input type="submit" value="Submit" onclick="msg();">
+         <br>
+         <br>
+         <a href="index.php">Go back to home page</a>
+        </fieldset>
+       </form>       
+
+</body>
+</html>
